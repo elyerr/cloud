@@ -25,7 +25,7 @@ import { registerTemplateEntries } from './newMenu/newFromTemplate.ts'
 
 import { registerFavoritesView } from './views/favorites.ts'
 import registerRecentView from './views/recent'
-import registerPersonalFilesView from './views/personal-files'
+import { registerPersonalFilesView } from './views/personal-files'
 import { registerFilesView } from './views/files'
 import { registerFolderTreeView } from './views/folderTree.ts'
 import { registerSearchView } from './views/search.ts'
@@ -36,6 +36,7 @@ import { initLivePhotos } from './services/LivePhotos'
 import { isPublicShare } from '@nextcloud/sharing/public'
 import { registerConvertActions } from './actions/convertAction.ts'
 import { registerFilenameFilter } from './filters/FilenameFilter.ts'
+import { registerFilterToSearchToggle } from './filters/SearchFilter.ts'
 
 // Register file actions
 registerConvertActions()
@@ -70,6 +71,7 @@ registerHiddenFilesFilter()
 registerTypeFilter()
 registerModifiedFilter()
 registerFilenameFilter()
+registerFilterToSearchToggle()
 
 // Register preview service worker
 registerPreviewServiceWorker()
